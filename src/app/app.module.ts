@@ -8,18 +8,21 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CityPipe } from './shared/pipes/city.pipe';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { LookupComponent } from './lookup/lookup.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     FlightBookingModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES)
   ],
   declarations: [
@@ -27,6 +30,7 @@ import { RouterModule } from '@angular/router';
     SidebarComponent,
     NavbarComponent,
     HomeComponent,
+    LookupComponent,
   ],
   providers: [
     // { provide: FlightService, useClass: FlightService }
@@ -38,3 +42,4 @@ import { RouterModule } from '@angular/router';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+,
